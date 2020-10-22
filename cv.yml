@@ -1,0 +1,36 @@
+--- # MiniProyecto CV
+fotografia: avatar.png
+informacion_pagina:
+    autor: Fátima Avila
+    titulo: Mi CV
+info_personal:
+    nombre: Fátima Sofía Alejandra Ávila Suárez
+    pais: Guatemala
+    idiomas:
+        - Español
+        - Inglés
+    edad: 18
+    about: Me apasiona la tecnología, la innovación y el arte. Busco la manera de fusionar las tres para crear cosas e innovar la manera de vivir. 
+    experiencia: Software Engineer
+    intereses:
+        - Arte
+        - Tecnología
+        - Videojuegos
+        - Idiomas
+info_prof:
+    tecnologias: 
+        - Python
+        - C
+        - Java
+        
+    educacion: Universidad Francisco Marroquín
+info_refe:
+    refe_labo: 
+        - Fa's Atelier
+        - Suavil
+        - UC
+    refe_per: 
+        - Norman Gramajo
+        - Alejandrina Colindres
+        - Eric Ribeiro
+        - Alejandra Cano

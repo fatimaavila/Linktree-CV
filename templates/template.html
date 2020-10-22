@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>CV de Fátima Avila </title>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Abel|Bungee+Hairline|Sacramento|Raleway|Slabo+27px" rel="stylesheet">
+  
+  
+  
+<style>
+* {
+  max-width: 700px;
+  margin: auto;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/*body {
+    min-width: 500px;
+}*/
+
+div {
+  border-radius: 10px;
+}
+
+#header {
+  height: 40px;
+  width: 100%;
+  background-color: #ACA1DE;
+  position: fixed;
+  z-index: 1;
+}
+
+#title {
+  margin-left: 3%;
+}
+
+#footer {
+  height: 50px;
+  width: 100%;
+  background-color: #ACA1DE;
+  clear: both;
+  position: relative;
+}
+
+.left {
+  height: 1000px;
+  width: 45px;
+  background-color: #cbe6e6;
+  float: left;
+  position: fixed;
+}
+
+.right {
+  height: 1000px;
+  width: 45px;
+  background-color: #cbe6e6;
+  float: right;
+  position: inherit;
+}
+
+.stuff {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 55px;
+  width: 75%;
+  height: 1000px;
+}
+
+p,
+li {
+  font-family: 'Cormorant Garamond';
+}
+
+.head {
+  font-size: 20px;
+}
+
+#name {
+  font-family: Sacramento;
+  float: right;
+  margin-top: 10px;
+  margin-right: 4%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 430px) {
+  .left,
+  .right {
+    display: none;
+  }
+  .stuff {
+    width: 100%;
+    margin-left: 10px;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div id="header">
+    {% include 'navbar.html' %}
+</div>
+<div class="left"></div>
+<div class="stuff">
+  <br><br>
+  <img src="/static/img/avatar.jpeg" class="avatar">
+  <h1>{{datos['info_personal']['nombre']}}</h1>
+  <h3>{{datos['info_personal']['pais']}}</h3>
+  <h4>{{datos['info_personal']['experiencia']}}</h4>
+  <div style="text-align:right;">
+    
+</div>
+  <h4>Edad: {{datos['info_personal']['edad']}}</h4>
+  <br>
+  <h4>Idiomas</h4>
+  <p>
+    <ul> {% for idioma in idiomas%}
+      <li>{{idioma}}</li>
+      {% endfor%}
+    </ul>
+  <br>
+  </p>
+  <h3>About</h3>
+  <p> {{datos['info_personal']['about']}} </p>
+  <br>
+  <h3>Intereses</h3>
+  <ul>
+    {% for interes in intereses%}
+      <li>{{interes}}</li>
+      {% endfor %}
+  </ul>
+  <br>
+  <h3>Tecnologías // Lenguajes </h3>
+  <ul>
+    {% for tecnologia in tecnologias %}
+    <li>{{tecnologia}}</li>
+    {% endfor%}
+  </ul>
+  <br>
+  <h4>Educación</h4>
+  <ul>
+    {% for name,link in links.items() %}
+    <li>
+        <a href="{{link}}" target="_blank" >{{name}} </a>
+    </li>
+{% endfor %}
+  </ul>
+  <br>
+  <h4>Referencias laborales</h4>
+  <ul>
+    {% for Referencias in referenciaslaborales %}
+    <li>{{Referencias}}</li>
+    {% endfor%}
+  </ul>
+  <h4>Referencias Personales</h4>
+  {% for Referencias in referenciaspersonal %}
+  <li>{{Referencias}}</li>
+  {% endfor %}
+  <ul>
+    
+  </ul>
+</div>
+<div class="right"></div>
+<div id="footer">
+  <h2 id="name">Fátima</h2></div>
+  
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
